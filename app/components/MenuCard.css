@@ -1,0 +1,142 @@
+.menu-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 280px));
+  justify-content: start;
+  gap: 16px;
+  padding: 12px;
+}
+
+.menu-card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid #e8ddd0;
+  border-radius: 8px;
+  background: #fffdf9;
+  color: #2b1d14;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease;
+}
+
+
+.menu-card img {
+  width: 100%;
+  height: 44%;
+  flex: 0 0 44%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.menu-card-content {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.menu-card-content h3 {
+  margin: 0 0 6px;
+  color: #2b1d14;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+.menu-card-content p {
+  margin: 0;
+  color: #74675d;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.menu-card-content p:first-of-type {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.menu-card-actions {
+  margin-top: auto;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.menu-card-price {
+  margin: 0;
+  color: #9a572b;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.add-to-cart-button {
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 6px;
+  padding: 9px 12px;
+  background: #6f3f24;
+  color: #fffdf9;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+  width: 100px;
+}
+
+.add-to-cart-button:hover {
+  background: #512d19;
+  transform: translateY(-1px);
+}
+
+.add-to-cart-button:focus-visible {
+  outline: 3px solid #d7a86e;
+  outline-offset: 2px;
+}
+
+.menu-card:hover {
+  transform: translateY(-3px);
+  border-color: #d7b99b;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-card {
+    transition: none;
+  }
+
+  .menu-card:hover {
+    transform: none;
+  }
+
+  .add-to-cart-button {
+    transition: none;
+    width: 100px;
+  }
+}
+
+.menu-card-availability {
+  margin-top: 5px !important;
+  color: #47734b !important;
+  font-size: 12px !important;
+  font-weight: 600;
+}
+
+.add-to-cart-button:disabled {
+  background: #a9a29d;
+  cursor: not-allowed;
+  transform: none;
+}

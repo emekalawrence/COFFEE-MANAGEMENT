@@ -1,0 +1,1 @@
+var e=`http://localhost:5000`.replace(/\/$/,``);function t(t){return`${e}${t.startsWith(`/`)?t:`/${t}`}`}export{t};
